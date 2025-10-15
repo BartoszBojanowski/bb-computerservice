@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bartosz Bojanowski — Serwis komputerowy / Computerservice</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #111; color: #eee; margin:0; padding:0; }
+    header { text-align:center; padding:2rem; background-color:#1a1a1a; }
+    h1 { font-size:2rem; margin:0; }
+    nav { text-align:center; margin:1rem 0; }
+    nav button { background:none; border:1px solid #555; color:#eee; margin:0 0.5rem; padding:0.5rem 1rem; cursor:pointer; border-radius:8px; }
+    nav button:hover { background-color:#333; }
+    section { max-width:800px; margin:auto; padding:2rem; text-align:center; }
+    .contact { margin-top:2rem; }
+    a { color:#1da1f2; text-decoration:none; }
+    .whatsapp-button { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background-color:#25D366; color:#fff; border-radius:8px; font-weight:bold; text-decoration:none; }
+    .whatsapp-button:hover { background-color:#20b85c; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => { el.style.display = el.getAttribute('data-lang')===lang?'block':'none'; });
+    }
+  </script>
+</head>
+<body onload="switchLang('pl')">
+  <header>
+    <h1>Bartosz Bojanowski</h1>
+    <p data-lang="pl">Profesjonalny serwis komputerowy</p>
+    <p data-lang="de" style="display:none;">Professioneller Computerservice</p>
+  </header>
+  <nav>
+    <button onclick="switchLang('pl')">Polski</button>
+    <button onclick="switchLang('de')">Deutsch</button>
+  </nav>
+  <section>
+    <div data-lang="pl">
+      <h2>Usługi</h2>
+      <p>Diagnoza komputerów, wgrywanie systemu Windows, odzyskiwanie danych, wymiana uszkodzonych części.</p>
+      <p>Wszystko wykonywane przez moją działalność <b>Kleingewerbe</b> w domu.</p>
+    </div>
+    <div data-lang="de" style="display:none;">
+      <h2>Dienstleistungen</h2>
+      <p>Computerdiagnose, Windows-Installation, Datenrettung, Austausch defekter Komponenten.</p>
+      <p>Alles wird im Rahmen meines <b>Kleingewerbes</b> von zu Hause aus durchgeführt.</p>
+    </div>
+    <div class="contact">
+      <h2 data-lang="pl">Kontakt</h2>
+      <h2 data-lang="de" style="display:none;">Kontakt</h2>
+      <p data-lang="pl">Email: <a href="mailto:boyan201184@gmail.com">boyan201184@gmail.com</a></p>
+      <p data-lang="pl">Telefon / WhatsApp: <a href="https://wa.me/4915140338639">+49 151 40338639</a></p>
+      <p data-lang="pl">Adres: Vogtgarten 11, 95339 Wirsberg, Niemcy</p>
+      <p data-lang="de" style="display:none;">Email: <a href="mailto:boyan201184@gmail.com">boyan201184@gmail.com</a></p>
+      <p data-lang="de" style="display:none;">Telefon / WhatsApp: <a href="https://wa.me/4915140338639">+49 151 40338639</a></p>
+      <p data-lang="de" style="display:none;">Adresse: Vogtgarten 11, 95339 Wirsberg, Deutschland</p>
+      <a class="whatsapp-button" href="https://wa.me/4915140338639" target="_blank">💬 Napisz na WhatsApp / Schreibe WhatsApp</a>
+    </div>
+  </section>
+</body>
+</html>
